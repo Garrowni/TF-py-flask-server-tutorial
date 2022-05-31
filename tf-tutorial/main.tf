@@ -45,7 +45,7 @@ resource "google_compute_instance" "vm_instance" {
   }
 }
 
-resource "google_comute_firewall" "ssh" {
+resource "google_compute_firewall" "ssh" {
     name = "allow-ssh"
     allow {
         ports = ["22"]
