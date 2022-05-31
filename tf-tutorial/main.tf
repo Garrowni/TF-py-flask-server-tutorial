@@ -46,14 +46,14 @@ resource "google_compute_instance" "vm_instance" {
 }
 
 resource "google_compute_firewall" "flask" {
-    name = "flask-app-firewall"
-    network = "py-network"
+  name    = "flask-app-firewall"
+  network = "py-network"
 
-    allow {
-        protocol = "tcp"
-        ports = ["5000"]
-    }
-    source_ranges = ["0.0.0.0/0"]
+  allow {
+    protocol = "tcp"
+    ports    = ["5000"]
+  }
+  source_ranges = ["0.0.0.0/0"]
 }
 resource "google_compute_firewall" "ssh" {
   name = "allow-ssh"
@@ -67,3 +67,4 @@ resource "google_compute_firewall" "ssh" {
   source_ranges = ["0.0.0.0/0"]
   target_tags   = ["ssh"]
 }
+
