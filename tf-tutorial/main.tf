@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("C:/GCPKeys/python-flask-server-351921-ca4aacb35118.json")
+  credentials = file("C:/GCPKeys/python-flask-server-351921-ca4aacb35118.json") #better to use env variables rather then this.
   project     = "python-flask-server-351921"
   region      = "us-central1"
   zone        = "us-central1-c"
